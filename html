@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Capacho - Sabor Auténtico de Cerro de Pasco</title>
+    <!-- Remixicons para íconos -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header / Menú Superior -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo" onclick="showSection('home')">
+                <i class="ri-restaurant-2-fill"></i> EL CAPACHO
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <button class="nav__btn active-btn" onclick="showSection('home')">INICIO & PASCO</button>
+                    </li>
+                    <li class="nav__item">
+                        <button class="nav__btn" onclick="showSection('about')">EL RESTAURANTE 2.0</button>
+                    </li>
+                    <li class="nav__item">
+                        <button class="nav__btn" onclick="showSection('menu')">CARTA PASQUEÑA</button>
+                    </li>
+                    <li class="nav__item">
+                        <button class="nav__btn" onclick="showSection('orders')">PEDIDOS & DELIVERY</button>
+                    </li>
+                    <li class="nav__item">
+                        <button class="nav__btn" onclick="showSection('contact')">RESERVAS</button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- SECCIÓN 1: INICIO + PRESENTACIÓN DE LA CULTURA PASQUEÑA -->
+        <section class="section page-section active-section" id="home">
+            <!-- Hero Principal de Entrada -->
+            <div class="hero__container" style="background-image: url('https://d1uz88p17r663j.cloudfront.net/original/98a6cd1e083b025589cac050bd257782_Caldo_verde_PlatoFinal.jpg');">
+                <div class="hero__overlay"></div>
+                <div class="hero__content container">
+                    <span class="hero__subtitle">BIENVENIDOS A CERRO DE PASCO (4,338 M S. N. M.)</span>
+                    <h1 class="hero__title">RESTAURANTE "EL CAPACHO"</h1>
+                    <p class="hero__description">
+                        Tradición, calor de hogar y gastronomía ancestral en la Capital Minera del Perú. Descubre el origen de nuestros sabores rodeados de historia y riqueza andina.
+                    </p>
+                    <div class="hero__buttons">
+                        <button class="btn btn--primary" onclick="showSection('menu')">
+                            VER CARTA (12 PLATOS) <i class="ri-restaurant-line"></i>
+                        </button>
+                        <button class="btn btn--whatsapp" onclick="showSection('orders')">
+                            HAZ TU PEDIDO YA <i class="ri-whatsapp-line"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Presentación de la Cultura y Maravillas de Pasco -->
+            <div class="pasco__culture container">
+                <div class="section__header">
+                    <span class="section__tag">NUESTRAS RAÍCES CERREÑAS</span>
+                    <h2 class="section__title">Identidad, Tierra y Tradición Culinaria</h2>
+                    <p class="section__subtitle">Conoce los paisajes e íconos históricos que inspiran el sabor de El Capacho</p>
+                </div>
+
+                <div class="culture__grid">
+                    <!-- Ícono 1: Reloj Campana -->
+                    <div class="culture__card">
+                        <div class="culture__img-box">
+                            <img src="https://scontent.flim6-4.fna.fbcdn.net/v/t1.6435-9/83387076_2749838158621610_2025265200017008478_n.jpg?stp=dst-jpg_tt6&cstp=mx764x960&ctp=s640x640&_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_ohc=5qITkrX9SAEQ7kNvwEOZjKB&_nc_oc=AdrFEylLf8lO5BIT_756ta1sXkFbVtUHIzWV66xEueNWeydr65SukyLoeexQrW9Lqdc&_nc_zt=23&_nc_ht=scontent.flim6-4.fna&_nc_gid=17rZHDVpRCbK3Pt-_EkSYg&_nc_ss=7b289&oh=00_AQOLoshJhdCLpWmWhsxl67OTpTh91G1iY2sQYp4HDLsDgw&oe=6AEDFE39" alt="Reloj Campana de la Plaza Carrión" class="culture__img">
+                        </div>
+                        <div class="culture__info">
+                            <h3>Reloj de Campana (Plaza Carrión)</h3>
+                            <p>Símbolo histórico e identitario del centro de Cerro de Pasco y Chaupimarca. Guarda la memoria viva y la tradición de nuestro pueblo.</p>
+                        </div>
+                    </div>
+
+                    <!-- Ícono 2: Bosque de Piedras de Huayllay -->
+                    <div class="culture__card">
+                        <div class="culture__img-box">
+                            <img src="https://www.infobae.com/resizer/v2/2IEDTDWNGZCPDLOTWHHXXEAD4A.png?auth=8a870fbf8bac9b1a718859e102866daa8f48734a158bf84274c7ca2ce4edf489" alt="Bosque de Piedras de Huayllay" class="culture__img">
+                        </div>
+                        <div class="culture__info">
+                            <h3>Bosque de Piedras de Huayllay</h3>
+                            <p>Una de las 7 Maravillas Naturales del Perú. Gigantescas figuras pétreas donde nuestros antepasados cultivaron las hierbas de la jalca.</p>
+                        </div>
+                    </div>
+
+                    <!-- Ícono 3: Laguna de Punrun -->
+                    <div class="culture__card">
+                        <div class="culture__img-box">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFqa2tPxUxSHO9Nhe0Wx6wdozaS18dgNAveI0jA7LLl_A69fA9bhyjCCm-&s=10" alt="Laguna de Punrun" class="culture__img">
+                        </div>
+                        <div class="culture__info">
+                            <h3>Laguna de Punrun</h3>
+                            <p>Espejo de agua cristalino a más de 4,400 metros de altitud, fuente de las truchas más frescas que servimos doradas en la mesa.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: EL RESTAURANTE 2.0 (AMPLIADO TIPO INICIO REFORZADO) -->
+        <section class="section page-section container" id="about">
+            <div class="section__header">
+                <span class="section__tag">EXPERIENCIA GASTRONÓMICA & REFUGIO TÉRMICO</span>
+                <h2 class="section__title">Nuestra Casa: El Corazón Chero de Pasco</h2>
+                <p class="section__subtitle">Descubre cómo transformamos la gélida altura cerreña en un espacio lleno de sabor, calor y tradición</p>
+            </div>
+
+            <!-- Banner Informativo Principal -->
+            <div class="about__hero-box">
+                <div class="about__hero-overlay"></div>
+                <div class="about__hero-text">
+                    <h3>Cocinando a Fuego Lento desde la Altura</h3>
+                    <p>A más de 4,300 metros sobre el nivel del mar, en Cerro de Pasco la cocina no es solo alimento, es vida y refugio. En <strong>El Capacho</strong> guardamos las técnicas ancestrales de macerado, batán de piedra y guisado a leña que reconfortan el cuerpo y el alma.</p>
+                </div>
+            </div>
+
+            <!-- Cuadrícula Informativa de Servicios e Instalaciones -->
+            <div class="about__info-grid">
+                <div class="about__info-card">
+                    <i class="ri-fire-fill about__card-icon"></i>
+                    <h4>Salón Térmico Climatizado</h4>
+                    <p>Ambiente construido con paredes rústicas de piedra volcánica y chimeneas a leña encendidas todo el día para mantener un calor constante de hogar.</p>
+                </div>
+
+                <div class="about__info-card">
+                    <i class="ri-restaurant-line about__card-icon"></i>
+                    <h4>Ollas de Barro & Mampostería</h4>
+                    <p>Servimos todos nuestros caldos y potajes en vajilla autóctona de barro cocido que conserva la temperatura hirviendo desde la cocina hasta tu mesa.</p>
+                </div>
+
+                <div class="about__info-card">
+                    <i class="ri-leaf-fill about__card-icon"></i>
+                    <h4>Insumos Frescos de la Jalca</h4>
+                    <p>Hierbas aromáticas cosechadas en las alturas pasqueñas: muña, chincho, paico y huacatay molidos a mano en batán tradicional de granito.</p>
+                </div>
+
+                <div class="about__info-card">
+                    <i class="ri-cup-fill about__card-icon"></i>
+                    <h4>Bienvenida con Mate Caliente</h4>
+                    <p>Cada visitante es recibido gratuitamente con un infusor hirviendo de muña y canela para ayudar a la aclimatación inmediata al ingresar a nuestro local.</p>
+                </div>
+            </div>
+
+            <!-- Sección de Filosofía Culinaria -->
+            <div class="about__philosophy">
+                <div class="philosophy__content">
+                    <span class="section__tag">NUESTRA PROMESA</span>
+                    <h3>¿Por qué elegir "El Capacho"?</h3>
+                    <p>Nos llamamos <strong>El Capacho</strong> en honor al recipiente tradicional utilizado por los mineros y agricultores de Pasco para resguardar su alimento más preciado durante las duras jornadas. Cada plato que sale de nuestra cocina respeta la sazón original, porciones abundantes y el toque casero que solo la leña andina puede dar.</p>
+                    <button class="btn btn--primary" onclick="showSection('menu')">
+                        EXPLORAR LA CARTA AHORA <i class="ri-arrow-right-line"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: CARTA PASQUEÑA (12 PLATOS CON LINKS Y NOMBRES EXACTOS) -->
+        <section class="section page-section container" id="menu">
+            <div class="section__header">
+                <span class="section__tag">PLATOS TÍPICOS AUTÉNTICOS</span>
+                <h2 class="section__title">Nuestra Carta Pasqueña</h2>
+                <p class="section__subtitle">12 Especialidades tradicionales preparadas al momento</p>
+            </div>
+
+            <div class="menu__grid">
+                <!-- 1. Caldo Verde Pasqueño -->
+                <div class="food__card">
+                    <div class="food__img-box">
+                        <img src="https://d1uz88p17r663j.cloudfront.net/original/98a6cd1e083b025589cac050bd257782_Caldo_verde_PlatoFinal.jpg" alt="Caldo Verde Pasqueño" class="food__img">
+                    </div>
+                    <div class="food__info">
+                        <h3 class="food__title">1. Caldo Verde Pasqueño (Yacu Chupe)</h3>
+                        <p class="food__desc">Sopa de hierbas andinas molidas (paico, muña, huacatay), servido caliente con papa blanca sancochada, tajada de queso fresco y huevo escalfado.</p>
+                        <span class="food__price">S/ 18.00</span>
+                    </div>
+                </div>
+
+                <!-- 2. Caldo de Cordero -->
+                <div class="food__card">
+                    <div class="food__img-box">
+                        <img src="https://www.infobae.com/new-resizer/oNJoO-77N1G2jFEmgfMqca3a5N0=/arc-anglerfish-arc2-prod-infobae/public/OFG75TJ3WBHUDODX3YM6JRFWI4.jpg" alt="Caldo de Cordero" class="food__img">
+                    </div>
+                    <div class="food__info">
+                        <h3 class="food__title">2. La Crotada Pasqueña (Caldo de Cordero)</h3>
+                        <p class="food__desc">Concentrado vigorizante preparado con trozos seleccionados de carne de cordero de jalca, papas nativas de la zona y hierbas aromáticas.</p>
+                        <span class="food__price">S/ 26.00</span>
+                    </div>
+                </div>
+
+                <!-- 3. Pachamanca Pasqueña -->
+                <div class="food__card">
+                    <div class="food__img-box">
+                        <img src="https://cloudfront-us-east-1.images.arcpublishing.com/infobae/XQ6NDUNECJE3ZGJBXV5ATSPCC4.png" alt="Pachamanca Pasqueña" class="food__img">
+                    </div>
+                    <div class="food__info">
+                        <h3 class="food__title">3. Pachamanca Pasqueña (3 Carnes)</h3>
+                        <p class="food__desc">Plato festivo servido en plato de barro con carnes de carnero, cerdo y res maceradas en chincho y chicha de jora, acompañadas de humitas, habas y camotes.</p>
+                        <span class="food__price">S/ 42.00</span>
+                    </div>
+                </div>
+
+                <!-- 4. Picante de Cuy Tradicional -->
+                <div class="food__card">
+                    <div class="food__img-box">
+                        <img src="https://cloudfront-us-east-1.images.arcpublishing.com/infobae/D657GAPT4VA5NBPLOHXRP2BNIM.jpg" alt="Picante de Cuy Tradicional" class="food__img">
+                    </div>
+                    <div class="food__info">
+                        <h3 class="food__title">4. Picante de Cuy Tradicional</h3>
+                        <p class="food__desc">Cuy crujiente frito, servido en aderezo colorado de ají panca molido en batán con maní, acompañado de arroz y papas sancochadas.</p>
+                        <span class="food__price">S/ 38.00</span>
+                    </div>
+                </div>
+
+                <!-- 5. Arroz con Leche (Cambiado) -->
+                <div class="food__card">
+                    <div class="food__img-box">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThV_ysCgLCHnYTE6oVOMm41IJauciQUBLMm24huhkAYahu9BgY3zVCF_rF&s=10" alt="Arroz con Leche" class="food__img">
+                    </div>
+                    <div class="food__info">
+                        <h3 class="food__title">5. Arroz con Leche Casero</h3>
+                        <p class="food__desc">Delicioso postre cremoso de arroz cocido con leche fresca de vaca, canela en rama, clavo de olor y toque de cáscara de naranja.</p>
+                        <span class="food__price">S/ 10.00</span>
+                    </div>
+                </div>
+
+                <!-- 6. Alverjada de Mote con Chicharrón -->
+                <div class="food__card">
+                    <div class="food__img-box">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwbhpkalW22HFMYVF7nT3eEL3ErZ-aATBFg26WmEAaHUEoFAPhNTGmYwg&s=10" alt="Alverjada de Mote con Chicharrón" class="food__img">
+                    </div>
+                    <div class="food__info">
+                        <h3 class="food__title">6. Alverjada de Mote con Chicharrón</h3>
+                        <p class="food__desc">Trozos crujientes de chicharrón de cerdo frito en su propia manteca, servidos con mote de maíz sancochado y salsa criolla.</p>
+                        <span class="food__price">S/ 28.00</span>
+                    </div>
+                </div>
+
+                <!-- 7. Trucha Frita -->
+                <div class="food__card">
+                    <div class="food__img-box">
+                        <img src="https://i.pinimg.com/originals/7b/ff/b7/7bffb74f1cc26d5549759da457f6860f.jpg?nii=t" alt="Trucha Frita" class="food__img">
+                    </div>
+                    <div class="food__info">
+                        <h3 class="food__title">7. Trucha Frita de Punrun</h3>
+                        <p class="food__desc">Trucha fresca dorada a la sartén con papas nativas doradas, yucas sancochadas y ensalada criolla con ají limo.</p>
+                        <span class="food__price">S/ 32.00</span>
+                    </div>
+                </div>
+
+                <!-- 8. Locro de Gallina -->
+                <div class="food__card">
+                    <div class="food__img-box">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVyatgV5zvwX4yB9rR3ixnVUh-OlyPX6jZGWcQr4JU1594dZwGtkow1qko&s=10" alt="Locro de Gallina" class="food__img">
+                    </div>
+                    <div class="food__info">
+                        <h3 class="food__title">8. Locro de Gallina de Corral</h3>
+                        <p class="food__desc">Sopa espesa de gallina de chacra cocida con papa amarilla sancochada, aderezo de ají amarillo y orégano de la jalca.</p>
+                        <span class="food__price">S/ 25.00</span>
+                    </div>
+                </div>
+
+                <!-- 9. Charqui Pasqueño (Cambiado) -->
+                <div class="food__card">
+                    <div class="food__img-box">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl6OYNNXNO3Y2nF9glrqS3ACsm3wp7rNTBKaVqIcQyHIe9SW6bfpOiyUT6&s=10" alt="Charqui Pasqueño" class="food__img">
+                    </div>
+                    <div class="food__info">
+                        <h3 class="food__title">9. Charqui Cerreño Tradicional</h3>
+                        <p class="food__desc">Carne deshidratada y salada de camélido o res, deshilachada y salteada con cebolla, ajíes y papas doradas de la zona.</p>
+                        <span class="food__price">S/ 30.00</span>
+                    </div>
+                </div>
+
+                <!-- 10. Mazamorra de Calabaza -->
+                <div class="food__card">
+                    <div class="food__img-box">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_O5zWXOI1_frc0x0V9SO4iqZmhgD8OqjVvoRucPSkH2hRn8w-JYuehFlL&s=10" alt="Mazamorra de Calabaza" class="food__img">
+                    </div>
+                    <div class="food__info">
+                        <h3 class="food__title">10. Mazamorra de Calabaza con Chancaca</h3>
+                        <p class="food__desc">Postre andino caliente a base de pulpa de calabaza serrana, chancaca derretida, canela y leche fresca de vaca.</p>
+                        <span class="food__price">S/ 10.00</span>
+                    </div>
+                </div>
+
+                <!-- 11. Infusión de Muña (Cambiado) -->
+                <div class="food__card">
+                    <div class="food__img-box">
+                        <img src="https://buenazo.cronosmedia.glr.pe/original/2024/05/30/66590dad23491d4df7348e1a.jpg" alt="Infusión de Muña" class="food__img">
+                    </div>
+                    <div class="food__info">
+                        <h3 class="food__title">11. Infusión de Muña Reconfortante</h3>
+                        <p class="food__desc">Bebida caliente digestiva de muña fresca de la jalca, ideal para la altura, servida con canela y rodajas de limón.</p>
+                        <span class="food__price">S/ 8.00</span>
+                    </div>
+                </div>
+
+                <!-- 12. Chicha de Jora -->
+                <div class="food__card">
+                    <div class="food__img-box">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpgMEiLKAncaWx0kOr5o03mZN-iYSYosO3sx4wCodIa1Ii1gwxO9ujEhm1&s=10" alt="Chicha de Jora" class="food__img">
+                    </div>
+                    <div class="food__info">
+                        <h3 class="food__title">12. Chicha de Jora y Mote (Jarra)</h3>
+                        <p class="food__desc">Bebida sagrada fermentada de maíz guiñapo preparada artesanalmente en cántaros de barro.</p>
+                        <span class="food__price">S/ 12.00</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 4: PEDIDOS & DELIVERY -->
+        <section class="section page-section container" id="orders">
+            <div class="section__header">
+                <span class="section__tag">ATENCIÓN RÁPIDA A DOMICILIO</span>
+                <h2 class="section__title">Haz tu Pedido / Delivery</h2>
+                <p class="section__subtitle">Llevamos la comida caliente directo a tu hogar o centro de trabajo en Cerro de Pasco</p>
+            </div>
+
+            <div class="orders__container">
+                <div class="orders__card whatsapp__box">
+                    <i class="ri-whatsapp-fill whatsapp__icon"></i>
+                    <h3>Pedido Directo por WhatsApp</h3>
+                    <p>Haz clic para chatear con nuestro mozo virtual y enviar tu pedido en 1 minuto:</p>
+                    <a href="https://wa.me/51963852741?text=Hola%20El%20Capacho,%20deseo%20hacer%20un%20pedido%20de%20comida" target="_blank" class="btn btn--whatsapp btn--large">
+                        PEDIR POR WHATSAPP <i class="ri-send-plane-fill"></i>
+                    </a>
+                </div>
+
+                <div class="orders__card form__box">
+                    <h3>Formulario de Delivery</h3>
+                    <form id="order-form">
+                        <div class="form__field">
+                            <label>Tu Nombre</label>
+                            <input type="text" id="order-name" placeholder="Ej. Juan Pérez" class="form__input" required>
+                        </div>
+                        <div class="form__field">
+                            <label>Dirección de Entrega en Pasco</label>
+                            <input type="text" id="order-address" placeholder="Ej. Av. Los Incas 240, Chaupimarca" class="form__input" required>
+                        </div>
+                        <div class="form__field">
+                            <label>Platos que deseas pedir</label>
+                            <textarea id="order-details" rows="3" placeholder="Ej. 1 Pachamanca, 1 Caldo Verde y 1 Jarra de Chicha" class="form__input" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--block">
+                            ENVIAR PEDIDO A DOMICILIO
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 5: RESERVAS & UBICACIÓN -->
+        <section class="section page-section container" id="contact">
+            <div class="section__header">
+                <span class="section__tag">UBICACIÓN Y RESERVAS</span>
+                <h2 class="section__title">Visítanos en Chaupimarca</h2>
+            </div>
+
+            <div class="contact__grid">
+                <div class="contact__cards">
+                    <div class="contact__info-box">
+                        <i class="ri-map-pin-fill contact__icon"></i>
+                        <div>
+                            <h4>Dirección</h4>
+                            <p>Jr. Marqués de Visviso N° 184, Chaupimarca - Cerro de Pasco (A media cuadra de la Plaza Carrión)</p>
+                        </div>
+                    </div>
+
+                    <div class="contact__info-box">
+                        <i class="ri-phone-fill contact__icon"></i>
+                        <div>
+                            <h4>Teléfono de Atención</h4>
+                            <p>+51 963 852 741 / +51 987 123 456</p>
+                        </div>
+                    </div>
+
+                    <div class="contact__info-box">
+                        <i class="ri-time-fill contact__icon"></i>
+                        <div>
+                            <h4>Horario</h4>
+                            <p>Lunes a Domingo: 6:30 AM - 10:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulario de Reserva -->
+                <form class="contact__form" id="contact-form">
+                    <div class="form__alert" id="form-alert"></div>
+
+                    <div class="form__field">
+                        <label>Nombre y Apellidos</label>
+                        <input type="text" id="name" placeholder="Ej. Juan Pérez" class="form__input" required minlength="3">
+                    </div>
+
+                    <div class="form__field">
+                        <label>Correo Electrónico</label>
+                        <input type="email" id="email" placeholder="ejemplo@correo.com" class="form__input" required>
+                    </div>
+
+                    <div class="form__field">
+                        <label>Teléfono Celular</label>
+                        <input type="tel" id="phone" placeholder="987654321" class="form__input" required minlength="7">
+                    </div>
+
+                    <div class="form__field">
+                        <label>Mensaje o Detalle de Reserva</label>
+                        <textarea id="message" rows="4" placeholder="Indica fecha, hora y número de personas para reservar tu mesa..." class="form__input" required minlength="10"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn--primary btn--block">
+                        ENVIAR RESERVA <i class="ri-send-plane-fill"></i>
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&#169; 2026 Restaurante "El Capacho" - Cerro de Pasco. Orgullo Culinario Pasqueño.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+/* ===== ESTILO GOURMET CERREÑO MODERNO ===== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+    --primary-yellow: #f4c430;      /* Dorado / Maíz */
+    --primary-yellow-hover: #d8aa20;
+    --whatsapp-green: #25d366;      /* Verde WhatsApp */
+    --whatsapp-hover: #1ebd56;
+    --dark-bg: #121212;
+    --dark-card: #1e1e1e;
+    --text-light: #ffffff;
+    --text-gray: #b0b0b0;
+    --body-bg: #181818;
+    
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Poppins', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--body-bg);
+    color: var(--text-light);
+    overflow-x: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* ===== HEADER ===== */
+.header {
+    width: 100%;
+    background-color: rgba(18, 18, 18, 0.95);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 2px solid rgba(244, 196, 48, 0.3);
+}
+
+.nav {
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo {
+    font-family: var(--font-heading);
+    color: var(--primary-yellow);
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.nav__list {
+    display: flex;
+    gap: .75rem;
+}
+
+.nav__btn {
+    background: transparent;
+    border: 2px solid transparent;
+    color: var(--text-light);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.82rem;
+    padding: 0.55rem 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.nav__btn:hover, .nav__btn.active-btn {
+    background-color: var(--primary-yellow);
+    color: var(--dark-bg);
+    border-color: var(--primary-yellow);
+    box-shadow: 0 0 15px rgba(244, 196, 48, 0.4);
+}
+
+/* ===== SECCIONES ===== */
+.page-section {
+    display: none;
+    min-height: 80vh;
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+.page-section.active-section {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== HERO CON IMAGEN Y OVERLAY ===== */
+#home.page-section {
+    padding-top: 0;
+}
+
+.hero__container {
+    position: relative;
+    height: 85vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(18,18,18,0.7) 0%, rgba(18,18,18,0.92) 100%);
+}
+
+.hero__content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 850px;
+}
+
+.hero__subtitle {
+    color: var(--primary-yellow);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.hero__title {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 1.25rem;
+}
+
+.hero__description {
+    font-size: 1.1rem;
+    color: var(--text-gray);
+    margin-bottom: 2rem;
+    line-height: 1.7;
+}
+
+.hero__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+}
+
+/* BOTONES ===== */
+.btn {
+    padding: 0.85rem 1.8rem;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.9rem;
+    border-radius: 50px;
+    cursor: pointer;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    transition: all 0.3s ease;
+}
+
+.btn--primary {
+    background-color: var(--primary-yellow);
+    color: var(--dark-bg);
+}
+
+.btn--primary:hover {
+    background-color: var(--primary-yellow-hover);
+    transform: translateY(-2px);
+}
+
+.btn--whatsapp {
+    background-color: var(--whatsapp-green);
+    color: #ffffff;
+}
+
+.btn--whatsapp:hover {
+    background-color: var(--whatsapp-hover);
+    transform: translateY(-2px);
+}
+
+.btn--large {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    width: 100%;
+    justify-content: center;
+}
+
+/* ===== CULTURA PASQUEÑA EN INICIO ===== */
+.pasco__culture {
+    padding-top: 4rem;
+}
+
+.culture__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.culture__card {
+    background-color: var(--dark-card);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.culture__img-box {
+    height: 220px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.culture__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.culture__card:hover .culture__img {
+    transform: scale(1.08);
+}
+
+.culture__info {
+    padding: 1.5rem;
+}
+
+.culture__info h3 {
+    font-family: var(--font-heading);
+    color: var(--primary-yellow);
+    margin-bottom: .5rem;
+    font-size: 1.15rem;
+}
+
+.culture__info p {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* ===== RESTAURANTE 2.0 (NUEVOS ESTILOS) ===== */
+.about__hero-box {
+    position: relative;
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    background: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+    margin-bottom: 3rem;
+    border: 1px solid rgba(244, 196, 48, 0.3);
+    overflow: hidden;
+}
+
+.about__hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(18, 18, 18, 0.85);
+}
+
+.about__hero-text {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about__hero-text h3 {
+    font-family: var(--font-heading);
+    color: var(--primary-yellow);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.about__hero-text p {
+    color: var(--text-light);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.about__info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.75rem;
+    margin-bottom: 3rem;
+}
+
+.about__info-card {
+    background-color: var(--dark-card);
+    padding: 1.75rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: transform 0.3s ease;
+}
+
+.about__info-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-yellow);
+}
+
+.about__card-icon {
+    font-size: 2.5rem;
+    color: var(--primary-yellow);
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.about__info-card h4 {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    color: var(--text-light);
+    margin-bottom: .5rem;
+}
+
+.about__info-card p {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.about__philosophy {
+    background-color: var(--dark-card);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border-left: 6px solid var(--primary-yellow);
+    text-align: center;
+}
+
+.philosophy__content h3 {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    margin: .5rem 0 1rem;
+}
+
+.philosophy__content p {
+    color: var(--text-gray);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    max-width: 850px;
+    margin: 0 auto 1.75rem;
+}
+
+/* ===== TÍTULOS ===== */
+.section__header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section__tag {
+    color: var(--primary-yellow);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: .4rem;
+}
+
+.section__title {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+.section__subtitle {
+    color: var(--text-gray);
+    margin-top: .4rem;
+}
+
+/* ===== CARTA (FOOD CARDS) ===== */
+.menu__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.food__card {
+    background-color: var(--dark-card);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.08);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.food__card:hover {
+    transform: translateY(-6px);
+    border-color: var(--primary-yellow);
+}
+
+.food__img-box {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.food__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.food__info {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.food__title {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: .5rem;
+}
+
+.food__desc {
+    color: var(--text-gray);
+    font-size: 0.88rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.food__price {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--primary-yellow);
+}
+
+/* ===== PEDIDOS ===== */
+.orders__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.orders__card {
+    background-color: var(--dark-card);
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.whatsapp__box {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.whatsapp__icon {
+    font-size: 4rem;
+    color: var(--whatsapp-green);
+    margin-bottom: 1rem;
+}
+
+.whatsapp__box h3 {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    margin-bottom: .75rem;
+}
+
+.whatsapp__box p {
+    color: var(--text-gray);
+    margin-bottom: 1.75rem;
+}
+
+/* ===== CONTACTO Y FORMULARIO ===== */
+.contact__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.contact__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.contact__info-box {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    background-color: var(--dark-card);
+    padding: 1.25rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.contact__icon {
+    font-size: 2rem;
+    color: var(--primary-yellow);
+}
+
+.contact__form {
+    background-color: var(--dark-card);
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.form__field {
+    margin-bottom: 1.25rem;
+}
+
+.form__field label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-gray);
+    margin-bottom: .4rem;
+    font-weight: 600;
+}
+
+.form__input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.15);
+    background-color: #121212;
+    color: #ffffff;
+    font-family: var(--font-body);
+    outline: none;
+}
+
+.form__input:focus {
+    border-color: var(--primary-yellow);
+}
+
+.btn--block {
+    width: 100%;
+    justify-content: center;
+}
+
+.form__alert {
+    padding: 0.85rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    display: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.form__alert.success {
+    display: block;
+    background-color: #27ae60;
+    color: #ffffff;
+}
+
+.form__alert.error {
+    display: block;
+    background-color: #c0392b;
+    color: #ffffff;
+}
+
+.footer {
+    background-color: #0a0a0a;
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-gray);
+    font-size: 0.85rem;
+    margin-top: 3rem;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+// Navegación entre Secciones
+function showSection(sectionId) {
+    const sections = document.querySelectorAll('.page-section');
+    sections.forEach(section => {
+        section.classList.remove('active-section');
+    });
+
+    const targetSection = document.getElementById(sectionId);
+    if (targetSection) {
+        targetSection.classList.add('active-section');
+    }
+
+    const navBtns = document.querySelectorAll('.nav__btn');
+    navBtns.forEach(btn => {
+        btn.classList.remove('active-btn');
+    });
+
+    const activeBtn = Array.from(navBtns).find(btn => 
+        btn.getAttribute('onclick').includes(`'${sectionId}'`)
+    );
+    if (activeBtn) {
+        activeBtn.classList.add('active-btn');
+    }
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Formulario de Reserva
+const contactForm = document.getElementById('contact-form');
+const formAlert = document.getElementById('form-alert');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const phone = document.getElementById('phone').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        if (name === '' || email === '' || phone === '' || message === '') {
+            showAlert('Por favor, completa todos los campos.', 'error');
+            return;
+        }
+
+        showAlert('¡Reserva registrada en El Capacho! Te confirmaremos pronto.', 'success');
+        contactForm.reset();
+
+        setTimeout(() => {
+            formAlert.className = 'form__alert';
+            formAlert.textContent = '';
+        }, 5000);
+    });
+}
+
+// Formulario de Pedido a Domicilio
+const orderForm = document.getElementById('order-form');
+if (orderForm) {
+    orderForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('order-name').value.trim();
+        const address = document.getElementById('order-address').value.trim();
+        const details = document.getElementById('order-details').value.trim();
+
+        if (!name || !address || !details) {
+            alert('Por favor completa los datos de delivery.');
+            return;
+        }
+
+        // Abrir WhatsApp con el pedido redactado
+        const message = `Hola El Capacho, soy ${name}. Deseo un delivery para: ${address}. Mi pedido es: ${details}`;
+        const whatsappUrl = `https://wa.me/51963852741?text=${encodeURIComponent(message)}`;
+        window.open(whatsappUrl, '_blank');
+    });
+}
+
+function showAlert(msg, type) {
+    formAlert.textContent = msg;
+    formAlert.className = `form__alert ${type}`;
+}
